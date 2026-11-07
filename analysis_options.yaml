@@ -1,0 +1,8 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Os ficheiros antigos usam nomes de classes em minúsculas (ex.: pescacontra).
+    # Mantém-se assim para não partir referências; o código novo segue as regras.
+    camel_case_types: false
+    file_names: false

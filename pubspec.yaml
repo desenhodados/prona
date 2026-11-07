@@ -1,0 +1,37 @@
+name: prona
+description: "Proteção da Natureza: consulta de legislação ambiental e registo de ocorrências no terreno."
+publish_to: 'none'
+
+# A versão deve coincidir com AppConfig.versao (lib/app/config.dart).
+# O número depois do + tem de aumentar em cada publicação na loja.
+version: 2.0.0+20
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"   # Flutter 3.27 ou mais recente
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Já existentes (versões atualizadas)
+  url_launcher: ^6.3.0
+  shared_preferences: ^2.3.2
+  syncfusion_flutter_pdfviewer: ^28.1.33   # PDF ainda usados (SIRCA, caça, pesca)
+
+  # Novas
+  intl: ^0.19.0            # datas e horas (já era usado, mas faltava declarar)
+  image_picker: ^1.1.2     # fotografias das ocorrências
+  path_provider: ^2.1.4    # pasta privada das ocorrências
+  geolocator: ^13.0.1      # coordenadas GPS
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - images/
+    - pdf/
